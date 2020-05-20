@@ -1,9 +1,11 @@
 package in.vishu.onlinebookstore.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import in.vishu.onlinebookstore.entity.BookCategory;
 
-public interface BookCategoryRepository extends JpaRepository<BookCategory, Long>{
+@RepositoryRestResource(collectionResourceRel="bookCategory", path="book-category")
+public interface BookCategoryRepository extends JpaRepository<BookCategory, Long> {
 
 }
